@@ -18,6 +18,10 @@ export default function SignUp() {
   const router = useRouter();
   const toast = useRef(null);
 
+  const handleHomeClick = () => {
+    router.push("/");
+  };
+
   const handleSignUp = (e) => {
     e.preventDefault();
 
@@ -51,6 +55,16 @@ export default function SignUp() {
 
       <form onSubmit={handleSignUp}>
         <div className={Classes.container}>
+           <div className={Classes.homeButton}>
+            <Button 
+            onClick={handleHomeClick}
+            
+            variant="contained"
+              size="large"
+              type="submit"
+              
+              >Home</Button>
+            </div>
           <h1 className={Classes.header}>Sign Up</h1>
 
           <div className={Classes.card}>
@@ -63,6 +77,24 @@ export default function SignUp() {
               fullWidth
               className={Classes.cardInputType}
               required
+               sx={{
+              width: '300px',
+                '& .MuiInputBase-root': {
+              height: 56,
+               fontSize: '18px',
+               color:'white',
+                },
+                 '& label': {
+          color: 'white',
+                
+                },
+               '& .MuiOutlinedInput-root': {
+               '& fieldset': {
+                 borderColor: 'gray',
+                  },
+                
+               }
+              }}
             />
           </div>
 
@@ -76,6 +108,24 @@ export default function SignUp() {
               fullWidth
               className={Classes.cardInputType}
               required
+               sx={{
+              width: '300px',
+                '& .MuiInputBase-root': {
+              height: 56,
+               fontSize: '18px',
+               color:'white',
+             },
+              '& label': {
+          color: 'white',
+                
+                },
+                 '& .MuiOutlinedInput-root': {
+               '& fieldset': {
+                 borderColor: 'gray',
+                  },
+                
+               }
+               }}
             />
           </div>
 
@@ -88,6 +138,16 @@ export default function SignUp() {
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
                 label="User Role"
+                 sx={{
+              width: '300px',
+                '& .MuiInputBase-root': {
+              height: 56,
+               fontSize: '18px',
+               color:'white',
+                },
+                
+                
+               }}
               >
                 <MenuItem value="admin">Admin</MenuItem>
                 <MenuItem value="guest">Guest</MenuItem>
@@ -103,6 +163,14 @@ export default function SignUp() {
               type="submit"
               fullWidth
               className={Classes.cardButton}
+               sx={{
+              width: '300px',
+                '& .MuiInputBase-root': {
+              height: 56,
+               fontSize: '18px',
+               color:'white',
+                },
+               }}
             >
               SIGN UP
             </Button>

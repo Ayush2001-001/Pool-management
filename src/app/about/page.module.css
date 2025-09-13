@@ -1,0 +1,13 @@
+.container{
+  place-self: center;
+  border-radius: 10px;
+   height: 100vh;
+  width: 100vw;
+  background-image: url("/about.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  background-clip: content-box;
+}

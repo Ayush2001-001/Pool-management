@@ -3,15 +3,42 @@
   padding: 0;
   margin: 0;
 } */
+
+
+.container{
+  place-self: center;
+  border-radius: 10px;
+  /* height: 500px;
+  width: 500px; */
+   height: 100vh;
+  width: 100vw;
+  background-image: url("/sign.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  /* align-items: center;
+  justify-content: center; */
+  flex-direction: column;
+  /* margin-left: 500px; */
+  background-clip: content-box;
+}
+
+.homeButton{
+  padding: 15px;
+  margin: 10px;
+}
 .header{
   place-self: center;
   margin: 8px;
   padding: 15px;
   font-size: 50px;
-  margin-top: 100px;
+  margin-top: 10px;
+   color: rgb(208, 214, 240);
 }
 .card{
   place-self: center;
+   margin-top: 20px;
  
 }
 .cardInputType{
@@ -23,12 +50,13 @@
 .cardBody{
   place-self: center;
   margin-top: 15px;
+   margin-top: 30px;
  
 }
 .drop{
   place-self: center;
   padding: 5px ;
-  margin-top: 15px;
+  margin-top: 30px;
 }
 .As{
   padding: 8px 117px;
@@ -37,11 +65,12 @@
 .button{
 place-self: center;
 padding: 5px;
+ margin-top: 20px;
 
  
 }
 .cardButton{
-   border-radius: 5px;
+   border-radius: 10px;
   padding: 8PX 118px;
   margin: 2PX;
   font-size: 13px;
@@ -50,4 +79,5 @@ padding: 5px;
   place-self: center;
   padding: 2px;
   font-size: 20px;
+   margin-top: 20px;
 }

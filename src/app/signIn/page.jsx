@@ -17,12 +17,17 @@ export default function SignIn() {
   const cookies = useCookies();
   const toast = useRef(null);
 
+    const handleHomeClick = () => {
+    router.push("/");
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
 
     if (!userName && !password) {
       toast.current.show({
+        variant:"filled",
         severity: "error",
         summary: "Validation Error",
         detail: "Username and password are required.",
@@ -33,6 +38,7 @@ export default function SignIn() {
 
     if (!userName) {
       toast.current.show({
+        variant:"filled",
         severity: "error",
         summary: "Validation Error",
         detail: "Username is required.",
@@ -43,6 +49,7 @@ export default function SignIn() {
 
     if (!password) {
       toast.current.show({
+        variant:"filled",
         severity: "error",
         summary: "Validation Error",
         detail: "Password is required.",
@@ -88,7 +95,7 @@ export default function SignIn() {
         detail: "Login successful!",
         life: 2000,
       });
-
+      // router.refresh()
       router.push("/home");
     } catch (err) {
       console.error("Error:", err);
@@ -106,7 +113,19 @@ export default function SignIn() {
     <>
       <Toast ref={toast} />
       <form onSubmit={handleSubmit}>
+        
         <div className={Styles.container}>
+          <div className={Styles.border}>
+            <div className={Styles.homeButton}>
+            <Button 
+            onClick={handleHomeClick}
+            
+            variant="contained"
+              size="large"
+              type="submit"
+              
+              >Home</Button>
+            </div>
           <h1 className={Styles.signIn}>Sign In</h1>
 
           <div className={Styles.card}>
@@ -118,6 +137,25 @@ export default function SignIn() {
               onChange={(e) => setUserName(e.target.value)}
               variant="outlined"
               fullWidth
+               sx={{
+              width: '300px',
+                '& .MuiInputBase-root': {
+              height: 56,
+               fontSize: '18px',
+               color:'white',
+                },
+                 '& label': {
+          color: 'white',
+                
+                },
+                 '& .MuiOutlinedInput-root': {
+               '& fieldset': {
+                 borderColor: 'gray',
+                  },
+                
+               }
+               }}
+           
             />
           </div>
 
@@ -130,6 +168,24 @@ export default function SignIn() {
               onChange={(e) => setPassword(e.target.value)}
               variant="outlined"
               text = {50}
+              // color="white"
+                sx={{
+                width: '300px',
+                '& .MuiInputBase-root': {
+               height: 56,
+               fontSize: '18px',
+               color:'white'
+                },
+                 '& label': {
+               color: 'white',
+                
+                },
+                '& .MuiOutlinedInput-root': {
+               '& fieldset': {
+                 borderColor: 'gray',
+                  },
+                
+               }}}
             />
           </div>
 
@@ -139,13 +195,17 @@ export default function SignIn() {
               size="large"
               type="submit"
               className={Styles.cardButton}
-            >
-              SIGN IN
+               style={{
+                //  padding: '12px ',
+                 fontSize: '18px',
+                 minWidth: '300px',
+                  }}> SIGN IN
             </Button>
           </div>
-
+          
           <div className={Styles.link}>
-            <Link href="/signUp">Don't have an account? Sign Up</Link>
+            <Link className="link1" href="/signUp">Don't have an account? Sign Up</Link>
+          </div>
           </div>
         </div>
       </form>

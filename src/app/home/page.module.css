@@ -1,0 +1,60 @@
+    /* *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    } */
+    .container{
+  /* padding-top: 13vh; */
+    }
+  
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        height: 13vh;
+        width: 100vw;
+        background-color: cadetblue;
+        place-items: center;
+       /* position: fixed; */
+        
+
+    }
+    .href{
+      /* margin: 5px; */
+      
+      
+    }
+    .about{
+      margin: 5px;
+      padding: 5px;
+      text-decoration: none;
+      margin-top: 25px;
+    }
+    .service{
+           margin: 5px;
+           padding: 5px;
+           text-decoration: none;
+           margin-top: 25px;
+    }
+    
+    .contact{
+       margin: 5px;
+       padding: 5px;
+       text-decoration: none;
+       margin-top: 25px;
+    }
+    .blog{
+     margin: 5px;
+     padding: 5px;
+     text-decoration: none;
+     margin-top: 25px;
+    }
+    .authLinks{
+     
+    }
+    .profileContainer{
+      margin-top: 18px;
+    }
+    .item{
+       
+    }
+ 
