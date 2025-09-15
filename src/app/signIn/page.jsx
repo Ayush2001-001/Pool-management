@@ -168,7 +168,6 @@ export default function SignIn() {
               onChange={(e) => setPassword(e.target.value)}
               variant="outlined"
               text = {50}
-              // color="white"
                 sx={{
                 width: '300px',
                 '& .MuiInputBase-root': {

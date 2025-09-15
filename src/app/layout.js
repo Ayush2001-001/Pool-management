@@ -1,6 +1,6 @@
 
 import { Geist, Geist_Mono } from "next/font/google";
-// import "./globals.css";
+import "./globals.css";
 import { CookiesProvider } from "next-client-cookies/server";
 import Providers from  "./providers";
 

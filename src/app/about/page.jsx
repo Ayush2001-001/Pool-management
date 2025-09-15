@@ -4,7 +4,7 @@
    
  return(
         <div className={Styles.container}>
-     <hi> About</hi>
+     <h1> About</h1>
      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste similique, soluta facere provident nisi mollitia delectus cum sunt ratione asperiores velit eligendi quasi eius fuga obcaecati quos deleniti unde dicta.</p>
      </div>
     );
