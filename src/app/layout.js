@@ -2,7 +2,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { CookiesProvider } from "next-client-cookies/server";
-import Providers from  "./providers";
+import Provider from  "./provider";
 
 
 const geistSans = Geist({
@@ -24,12 +24,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Providers store={store}>
+        <Provider store={store}>
           
         <CookiesProvider >
           {children}
         </CookiesProvider>
-        </Providers>
+        </Provider>
 
       </body>
     </html>
